@@ -1,5 +1,8 @@
 # 阿里云代金券余额 · DSH 插件
 
+[![Release](https://img.shields.io/github/v/release/Sandroey/aliyun-coupon-plugin?label=release&color=2ea44f)](https://github.com/Sandroey/aliyun-coupon-plugin/releases/latest)
+[![Repo](https://img.shields.io/badge/repo-Sandroey%2Faliyun--coupon--plugin-181717?logo=github)](https://github.com/Sandroey/aliyun-coupon-plugin)
+
 在 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（简称 DSH）的 Web 界面里，**常驻显示阿里云代金券（现金券）的可用余额和今日变化**，支持多个阿里云账号同时查看。
 
 > 数据来自阿里云 BSS OpenAPI 的 `QueryCashCoupons`，凭据只保存在本机，前端永远拿不到 AccessKey Secret。
@@ -107,19 +110,31 @@ DSH 浏览器端
 
 ## 安装
 
-### 方式一：克隆到本地，让 DSH 安装（推荐）
+先拿到插件文件（两种方式任选其一），再让 DSH 安装该目录。
+
+### A. 下载 Release 包（不用装 git）
+
+打开 [Releases](https://github.com/Sandroey/aliyun-coupon-plugin/releases/latest)，下载 `aliyun-coupon-plugin-1.1.0.zip`，
+解压到任意目录，例如：
+
+```
+D:\tools\aliyun-coupon-plugin-1.1.0\
+```
+
+### B. 用 git 克隆
 
 ```bash
 git clone https://github.com/Sandroey/aliyun-coupon-plugin.git
 ```
 
-然后对 DSH 助手说：
+### 安装到 DSH（两种情况通用）
 
-> 帮我安装 `D:\path\to\aliyun-coupon-plugin` 这个 bundle
+对 DSH 助手说：
+
+> 帮我安装 `D:\tools\aliyun-coupon-plugin-1.1.0` 这个 bundle
 
 DSH 会调用 `plugin_manager install_bundle`，把包的绝对路径作为目标安装到当前 profile。
-
-### 方式二：如果 DSH 助手支持直接调用工具
+也可以直接指定工具参数：
 
 ```
 plugin_manager(action="install_bundle", target="<插件目录的绝对路径>")
