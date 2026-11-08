@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Alibaba Cloud Coupon Balance",
+    "description": "Keeps the Alibaba Cloud cash coupon balance and today's change in the sidebar, with per-coupon details, expiry warnings, and automatic refresh."
+  }
+}

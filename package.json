@@ -1,0 +1,30 @@
+{
+  "name": "@local/aliyun-coupon",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "阿里云代金券余额侧栏卡片（多账户）",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

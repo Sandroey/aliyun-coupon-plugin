@@ -1,0 +1,3 @@
+- insert:
+    - id: aliyun-coupon
+      name: '@local/aliyun-coupon'
